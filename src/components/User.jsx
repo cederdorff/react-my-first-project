@@ -1,12 +1,9 @@
-export default function User({ name, image, title, mail }) {
+export default function User({ name, mail, image }) {
   return (
-    <article className="user-card">
+    <div className="user-card">
       <img src={image} alt={name} />
       <h2>{name}</h2>
-      <p className="title">{title}</p>
-      <p>
-        <a href={`mailto:${mail}`}>{mail}</a>
-      </p>
-    </article>
+      <p>{mail}</p>
+    </div>
   );
 }
