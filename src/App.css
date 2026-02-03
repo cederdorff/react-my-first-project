@@ -1,7 +1,9 @@
+/* App Container Styles */
 .app {
   padding: 1rem;
 }
 
+/* Grid Layout for User Cards */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -9,6 +11,7 @@
   margin-top: 1rem;
 }
 
+/* User Card Styles */
 .user-card {
   background: #3b3737;
   padding: 1rem;
@@ -16,6 +19,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* User Card Image Styles */
 .user-card img {
   width: 100%;
   height: 250px;

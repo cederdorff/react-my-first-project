@@ -3,15 +3,17 @@ import "./App.css";
 import User from "./components/User";
 
 function App() {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]); // State to hold user data fetched from the API
 
+  // Fetch user data when the component mounts (when App is first rendered)
   useEffect(() => {
+    // Define an async function to fetch user data
     async function fetchUsers() {
-      const response = await fetch("https://raw.githubusercontent.com/cederdorff/race/master/data/users.json");
-      const data = await response.json();
-      setUsers(data);
+      const response = await fetch("https://raw.githubusercontent.com/cederdorff/race/master/data/users.json"); // Fetch data from the provided URL
+      const data = await response.json(); // Parse the JSON response
+      setUsers(data); // Update state with fetched user data
     }
-    fetchUsers();
+    fetchUsers(); // Call the async function to initiate the fetch
   }, []);
 
   return (
